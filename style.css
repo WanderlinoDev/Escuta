@@ -1,0 +1,298 @@
+/* Estilos gerais */
+body {
+    /* NOVIDADE: APLICA MONTSERRAT */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Força o peso Bold da fonte */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav ul {
+    list-style: none;
+    background-color: #040344;
+    
+    /* REVERTE PARA OCUPAR 100% DA LARGURA DA TELA */
+    max-width: none; 
+    margin: 0; 
+    
+    padding: 10px 0; /* Espaçamento vertical de 10px */
+    
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border-radius: 10px; 
+}
+
+/* Mantendo a centralização dos links */
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    /* TEXTO BRANCO: #ffffff */
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Adicionado box-shadow no transition */
+}
+
+nav ul li a:hover {
+    /* EFEITO CONTORNO LARANJA: #f5a411 */
+    box-shadow: 0 0 0 2px #f5a411; 
+    background-color: rgba(245, 164, 17, 0.2); 
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+
+/* Submenu (mantido inalterado) */
+nav ul li ul.submenu {
+    display: block;
+    opacity: 0;
+    /* ... o resto das regras do submenu ... */
+}
+/* ... */
+
+/* Estilos adicionados para a nova estrutura */
+main#main-content {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Animação para o carregamento do conteúdo */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-heading {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.welcome-text {
+    text-align: center;
+    color: #666;
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Estilos para o conteúdo da página de sites */
+.page-content h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.page-content p {
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.image-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.image-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.image-item h3 {
+    color: #34495e;
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.image-item p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------------ */
+/* ESTILOS PARA A PÁGINA DE CONTATO (FINALIZADOS) */
+/* ------------------------------------------------------------------ */
+
+/* Estilos para o texto de introdução */
+.contact-intro {
+    font-size: 1.3em; 
+    font-weight: bold; 
+    font-style: normal; 
+    color: #34495e; 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Imagem do WhatsApp */
+.whatsapp-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.whatsapp-image img {
+    width: 300px; 
+}
+
+/* Contêiner dos telefones */
+.phone-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+/* Item individual do telefone (Solução de Centralização) */
+.phone-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* CENTRALIZA NOME E CAIXA HORIZONTALMENTE */
+    text-align: center;
+}
+
+/* Nome do profissional */
+.professional-name {
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px; 
+}
+
+/* Caixa de telefone e Botão de Agendamento (Padronizados) */
+.phone-number-box, .appointment-button {
+    display: inline-block; 
+    padding: 10px 20px;
+    
+    /* Padrão visual: Contorno Verde, Fundo Branco/Claro, Texto Preto */
+    border: 2px solid #25d366; 
+    background-color: #f9f9f9;
+    color: #333 !important; 
+    font-weight: bold;
+    
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilos específicos para a caixa de telefone (mantendo o padding) */
+.phone-number-box {
+    font-size: 1em; /* Tamanho um pouco menor que o botão */
+}
+
+/* Hover (passar o mouse) para telefone e botão */
+.phone-number-box:hover, .appointment-button:hover {
+    transform: translateY(-5px); /* Efeito de elevação */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-color: #128c7e; /* Verde mais escuro no contorno */
+}
+
+/* ========================================================================= */
+/* ESTILOS ESPECÍFICOS PARA O CONTEÚDO DA PÁGINA INICIAL (INDEX.HTML) */
+/* ========================================================================= */
+
+.home-content {
+    /* MANTÉM O ALINHAMENTO VERTICAL DA LOGO */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center;
+    min-height: calc(100vh - 60px - 20px); 
+    width: 100%;
+    box-sizing: border-box;
+
+    /* NOVIDADE: Estilo da caixa branca (baseado no .page-content) */
+    max-width: 900px;
+    margin: 20px auto; /* Centraliza a caixa horizontalmente */
+    padding: 20px;     
+    background-color: white; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* FIM DA NOVIDADE */
+}
+
+/* 2. Estilo para o logo (com borda, sombra e efeito) */
+.logo-home {
+    max-width: 350px; 
+    height: auto;
+    margin-bottom: 20px;
+    
+    /* NOVIDADE: Borda na mesma cor do hover do menu (#f5a411) */
+    border: 6px solid #f5a411; 
+    border-radius: 15px; 
+    /* Sombra ajustada para a nova cor */
+    box-shadow: 0 0 25px rgba(245, 164, 17, 0.7); 
+    
+    /* Efeito de aparecer suavemente (Fade-in) */
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards; 
+    animation-delay: 0.3s; 
+}
+
+/* 3. Keyframes para a animação de Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95); 
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* ========================================================================= */
+/* ESTILO PARA CENTRALIZAR E LIMITAR O CONTEÚDO DAS PÁGINAS CARREGADAS */
+/* ========================================================================= */
+
+.page-content {
+    /* Largura máxima para centralizar o texto (por exemplo, 900px) */
+    max-width: 900px;
+    margin: 20px auto; /* Centraliza a caixa de conteúdo */
+    padding: 20px;     /* Espaçamento interno para que o texto não toque nas bordas da tela */
+    background-color: white; /* Cor de fundo para destacar o conteúdo da página */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
